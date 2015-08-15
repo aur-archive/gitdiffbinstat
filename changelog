@@ -1,0 +1,131 @@
+Version 4.6
+  * Script
+   * Fix variable assignment bug (patch by Sebastian Lövdahl)
+Version 4.5-1
+  * PKGBUILD
+   * Fix zip path
+Version 4.5
+  * Script
+   * Fix error about deleting non-existing files (rm complained)
+Version 4.4
+  * Script
+   * Fix compatibility of git diff --diff-filter arguments with latest git version.
+Version 4.3
+  * Script
+   * Force output of programs to english
+  * PKGBUILD
+   * Download archive from github
+Version 4.2
+ * Script
+  * Fix bug in binary file move code.
+Version 4.1
+ * Script:
+  * Ensure compatibility with git 1.8.2
+Version 4.0
+ * Script:
+  * Support arguments like "master..." e.g. gitdiffbinstat master...
+Version 3.2
+ * Script:
+  * Change output of commit to more git-like style.
+  * Fix bug where we got negated results comparing 2 commits via foo..bar.
+Version 3.1
+ * Script
+  * Fix bug that messed up the output when we were in headless state and wanted to compare the current commit to some branch.
+Version 3.0
+ * Script
+  * Support gitdiffbinstat branchA..branchB (or tag/HEAD etc.) properly.
+Version 2.7
+ * Script
+  * Fix typo.
+Version 2.6
+ * Script
+  * Fix some functions which were broken due to upstream git output changes.
+ Tested to work with git 1.7.11
+Version 2.5
+ * Script
+  * Major rework
+  * Show file renames
+Version 2.0
+ * Script
+  * improve check if we are inside a work tree
+  * check if git can associate the script input with anything useful, if not exit
+  * improve display of between which branches/commits we see the diffstat
+Version 1.9.4
+ * Script
+  * make use of the multitask hack I already used in pacmanlog2gource
+  * add spaces between size values and units
+  * fixed bug which caused file size changes bigger than one GB not to be displayed properly
+Version 1.9.1
+ * Script
+  * Fix another small bug; when gstchval is 0, the echo was a little broken
+Version 1.9-2
+ * PKGBUILD
+  * add "grep" as dependency
+Version 1.9
+ * Script
+  * Fix bug which occured when there was only one insertion or only one deletion
+    in a non-binary file.
+  * If over-all site of files didn't change (but they were modified anyway), print
+    "0" (for the change in bytes) in white color.
+Version 1.8-3
+ * PKGBUILD
+  * tweak pkgdesc a little
+  * use https instead of http for url
+  * general cleanup
+Version 1.8-2
+ * PKGBUILD
+  * add changelog=changelog line
+Version 1.8
+ * Script
+  * also print that we can get a diff between current state and HEAD
+Version 1.7
+ * Script
+  * fix bug that caused an error when there were no changes in binary files
+  * for more clarification, print which directory we are comparing
+Version 1.6
+ * Script
+  * code cleanup
+  * use awk instead of grep -o
+Version 1.5
+ * Script
+  * make sure we can run the script multiple times at a time without conflicts
+  * say "1 file" instead of "1 files" when we only have one file
+  * remove temporary files when the script exits due to error
+Version 1.4
+ * Script
+  * fix bug where script would terminate too early due to no changes in any binary files.
+  * remove redundant code
+Version 1.3
+ * Script
+  * if there are not changes between the two compared commits, exit
+  * use an own   git diff --shorstat  and also print, how many lines were all in all added/deleted
+  * show how many files were added/deleted all in all
+Version 1.2
+ * Script
+  * move some code around
+  * add code comments
+  * we can also process git tags
+  * replace more greps with awks (awk rulez)
+  * make curbranch more stable (in case branch name contains a wildcard, is that possible?)
+  * use gits method to obtain curcommit instead of my own hack :]
+Version 1.1
+ * Script
+  * fix bug which caused wrong output numbers
+  * show amount of modified, deleted and added files
+Version 1.0
+ * Script
+  * if we are not in a git repo, whine at the user
+  * display the branch / commits we are comparing
+  * not only display the size changes in bytes, but in kb, Mb, Gb, pick the best
+Version 0.9
+ * PKGBUILD
+  * add pkgpage of aur.archlinux.org as website
+ * Script
+  * if no arguments are given, briefly explain how to use the script
+  * fix bug by using echo -n instead of echo
+  * if no binary file changed, don't shoy any stats
+Version 0.5-1
+ * PKGBUILD
+  * initial version
+ * Script
+  * initial version
